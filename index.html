@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>聊天室</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="chat-shell" aria-label="聊天对话">
+      <header class="topbar">
+        <div class="contact">
+          <div class="avatar" id="avatar" aria-hidden="true">林</div>
+          <div class="contact-text">
+            <h1 class="contact-name" id="contactName">林夏</h1>
+            <div class="contact-status" id="contactStatus">在线</div>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" id="activeSendBtn" type="button" title="让联系人主动发消息">✦</button>
+          <button class="icon-btn mobile-only" id="settingsBtn" type="button" title="设定">☰</button>
+        </div>
+      </header>
+
+      <section class="messages" id="messages" aria-live="polite"></section>
+
+      <form class="composer" id="composer">
+        <textarea id="messageInput" rows="1" placeholder="写一张字卡..." aria-label="讯息内容"></textarea>
+        <button class="send-btn" type="submit" title="发送">➤</button>
+      </form>
+    </section>
+
+    <aside class="settings" id="settingsPanel" aria-label="设定">
+      <h2>设定</h2>
+      <p>所有内容只保存在这个浏览器本地。语录库一行一句，联系人会从里面随机抽取。</p>
+
+      <div class="field">
+        <label for="nameInput">联系人名字</label>
+        <input id="nameInput" type="text" maxlength="24" value="林夏">
+      </div>
+
+      <div class="field">
+        <label for="quotesInput">联系人语录库</label>
+        <textarea id="quotesInput"></textarea>
+      </div>
+
+      <div class="range">
+        <div class="slider-label">
+          <label for="readChance">你的讯息被已读概率</label>
+          <span id="readChanceValue">62%</span>
+        </div>
+        <input id="readChance" type="range" min="0" max="100" value="62">
+      </div>
+
+      <div class="range">
+        <div class="slider-label">
+          <label for="instantReadChance">立刻已读概率</label>
+          <span id="instantReadChanceValue">18%</span>
+        </div>
+        <input id="instantReadChance" type="range" min="0" max="100" value="18">
+      </div>
+
+      <div class="range">
+        <div class="slider-label">
+          <label for="replyChance">已读后回复概率</label>
+          <span id="replyChanceValue">72%</span>
+        </div>
+        <input id="replyChance" type="range" min="0" max="100" value="72">
+      </div>
+
+      <div class="range">
+        <div class="slider-label">
+          <label for="activeChance">主动发消息频率</label>
+          <span id="activeChanceValue">中</span>
+        </div>
+        <input id="activeChance" type="range" min="0" max="4" value="2">
+      </div>
+
+      <div class="range">
+        <div class="slider-label">
+          <label for="delayPace">回复等待节奏</label>
+          <span id="delayPaceValue">自然</span>
+        </div>
+        <input id="delayPace" type="range" min="0" max="2" value="1">
+      </div>
+
+      <label class="switch-row" for="typingSwitch">
+        <span>显示正在输入</span>
+        <input id="typingSwitch" type="checkbox" checked>
+      </label>
+
+      <div class="panel-actions">
+        <button class="plain-btn" id="closeSettingsBtn" type="button">关闭</button>
+        <button class="primary-btn" id="resetBtn" type="button">重置设定</button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

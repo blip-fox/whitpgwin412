@@ -17,7 +17,7 @@ body,html {
 .header {
     text-align: left;
     padding: 15px;
-    background-color: rgba(236, 236, 235, 0.8);
+    background-color: rgba(234, 235, 230, 0.8);
     border-bottom: 1px solid #DEDEDE;
 }
 
@@ -25,5 +25,5 @@ body,html {
     font-size: 20px;
     color: #232323;
     margin: 0;
-    padding-left: 10px;
+    padding-left: 20px;
 }

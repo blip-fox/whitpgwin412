@@ -18,7 +18,7 @@ body,html {
 }
 
 .top-area {
-    background-color: #bccfd3;
+    background-color: #dfc5cb;
 }
 
 .day-header {
@@ -33,7 +33,7 @@ p#loveDays {
     text-align: center;
     font-size: 13px;
     font-weight: 500;
-    color: #1d4047;
+    color: #753342;
 }
 
 .header{
@@ -72,8 +72,8 @@ p#loveDays {
 }
 
 .status-dot-online {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     display: inline-block;
     border-radius: 50%;
     background-color: rgb(74, 160, 74);
@@ -84,7 +84,7 @@ p#loveDays {
 
 .his-status {
     display: inline-block;
-    font-size: 12px;
+    font-size: 13px;
     color: #666;
     -webkit-text-size-adjust: 100%;
 }

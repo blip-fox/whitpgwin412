@@ -1,3 +1,10 @@
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #555
+}
+
 body,html {
     margin: 0;
     padding: 0;
@@ -60,20 +67,25 @@ p#loveDays {
 
 .his-name {
     margin-left: 14px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .status-dot-online {
-    color: rgb(74, 160, 74);
-    font-size: 20px;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgb(74, 160, 74);
     margin-left: 8px;
     margin-right: 3px;
+    flex-shrink: 0;
 }
 
 .his-status {
     font-size: 10px;
     color: #666;
     margin-top: 2px;
+    -webkit-text-size-adjust: 100%;
 }
 
 .header-right {

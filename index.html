@@ -3,12 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>聊天室</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="style.css">
+    <title>聊天室♡</title>
 </head>
+
 <body>
-    <div class="header">
-        <h1>惠</h1>
+
+    <div class="top-area">
+        <div class="day-header">
+            <p id="loveDays">ᜊ相爱的第0天ᜊ</p>
+        </div>
     </div>
+
+    <header class="header">
+
+        <div class="header-left">
+            <button class="back-btn" id="backBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+            <span class="his-name" id="hisName">惠</span>
+            <span class="status-dot-online" id="statusDot">●</span>
+            <span class="his-status" id="hisStatus">在线</span>
+        </div>
+
+        <div class="header-right">
+            <div class="search-container">
+                <button class="search-btn" id="searchBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+
+            <div class="setting-container" style="position: relative;">
+                    <button class="setting-menu" id="settingMenu">⋯</button>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-item" onclick="document.getElementById('bgInput').click()">更换背景</div>
+                <div class="dropdown-item" id="changeNickname">更换昵称</div>
+                <div class="dropdown-item" id="commonPhraseBtn">他常说的话</div>
+            </div>
+        </div>
+
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-modal">
+                <div class="search-header">
+                    <input type="text" id="searchInput" placeholder="搜索聊天记录..." />
+                    <button id="searchButton">搜索</button>
+                    <button class="close-search" id="closeSearch">关闭</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="nickname-overlay" id="nicknameOverlay">
+            <div class="nickname-modal">
+                <div class="nickname-header">
+                    <span>更换昵称</span>
+                </div>
+
+                <div class="nickname-content">
+                    <input type="text" id="newNickname" placeholder="输入新昵称" />
+                    <button id="saveNickname">保存</button>
+                    <button class="close-nickname" id="closeNicknameOverlay">关闭</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="common-phrase-overlay" id="commonPhraseOverlay">
+            <div class="common-phrase-modal">
+                <div class="common-phrase-header">
+                    <span>他常说的话</span>
+                </div>
+
+                <div class="common-phrase-content">
+                    <ul id="commonPhraseList"></ul>
+                    <button class="close-common-phrase" id="closeCommonPhraseOverlay">关闭</button>
+                </div>
+            </div>
+        </header>
+
+    <input type="file" id="bgInput" accept="image/*" style="display: none;" />
+
+    <div class="chat-container">
+        <div class="chat-box" id="chatBox"></div>
+        <div class="typing-indicator" id="typingIndicator">惠正在输入</div>
+
+        <div class="input-area">
+            <button class="plusbtn" id="plusBtn">+</button>
+            <input type="text" id="userInput" placeholder="输入消息..." />
+            <button onclick="sendMessage()">发送</button>
+        </div>
+
+        <div class="plusbtn" id="plusBtn">
+            <button class="menuItem" id="stickerBtn">
+                <div class="menuIcon"><i class="fa fa-smile-o" aria-hidden="true"></i></div>
+            </button>
+            <button class="menuItem" id="voiceCallBtn">
+                <div class="menuIcon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            </button>
+            <button class="menuItem" id="videoCallBtn">
+                <div class="menuIcon"><i class="fa fa-video-camera" aria-hidden="true"></i></div>
+            </button>
+            <button class="menuItem" id="paymentBtn">
+                <div class="menuIcon"><i class="fa fa-gbp" aria-hidden="true"></i></div>
+            </button>
+        </div>
+
+        <div class="sticker-panel" id="stickerPanel">
+            <button class="add-sticker-btn" onclick="document.getElementById('stickerInput').click">+ 添加表情包</button>
+            <div class="sticker-grid" id="stickerGrid"></div>
+            <input type="file" id="stickerInput" accept="image/*" multiple hidden style="display: none;" onchange="addSticker(event)">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

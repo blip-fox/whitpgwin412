@@ -11,11 +11,11 @@ body,html {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     box-sizing: border-box
 }
 
-*,::after,::before {
+*, *::after, *::before {
     box-sizing: inherit
 }
 
@@ -25,10 +25,15 @@ body,html {
     height: 100dvh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
 }
 
 .top-area .day-header {
-    background-color: rgb(252, 241, 207);
+    flex: 0 0 24px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fcf1cf;
     height: 24px;
     flex-shrink: 0;
     display: flex;
@@ -45,15 +50,16 @@ body,html {
 }
 
 .header{
+    flex: 0 0 50px;
+    width: 100%;
     height: 50px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    background: rgb(255, 252, 244);
+    background: #fffcf4;
     border-bottom: 0.5px solid #E0E0E0;
     justify-content: space-between;
-    width: 100%;
-    top: 24px;
+    position: relative;
 }
 
 .header-left {
@@ -177,8 +183,10 @@ body,html {
 }
 
 .chat-container {
-    flex: 1;
+    flex: 1 1 auto;
     min-height: 0;
+    min-width: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -187,22 +195,30 @@ body,html {
 }
 
 .chat-box {
-    flex: 1;
+    flex: 1 1 auto;
     min-height: 0;
+    min-width: 0;
     overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
 }
 
 .input-area {
+    flex: 0 0 64px;
+    width: 100%;
+    height: 64px;
+    min-height: 64px;
     background-color: #fffcf4;
     border-top: 0.5px solid #dfdac9;;
     display: flex;
     align-items: center;
     padding: 10px;
     height: 64px;
-    min-height: 64px;
     flex-shrink: 0;
+    position: relative;
+    z-index: 10;
 }
 
 input[type=text] {

@@ -238,6 +238,7 @@ input[type=text] {
     color:#b38f3b;
     margin-left: 2px;
     font-size: 15px;
+    -webkit-text-size-adjust: 100%;
 }
 
 .sticker-btn:active {
@@ -256,6 +257,7 @@ input[type=text] {
     color:#b38f3b;
     margin-left: 6px;
     font-size: 22px;
+    -webkit-text-size-adjust: 100%;
 }
 
 .plus-btn:active {
@@ -274,6 +276,7 @@ input[type=text] {
     color:#ffffff;
     margin-left: 2px;
     margin-right: 2px;
+    -webkit-text-size-adjust: 100%;
 }
 
 .send-btn:active {

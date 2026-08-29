@@ -240,6 +240,7 @@ input[type=text] {
     background:  #fffcf4;
     color:#b38f3b;
     margin-left: 2px;
+    transition: 0.1s;
 }
 
 .sticker-btn i {
@@ -252,6 +253,7 @@ input[type=text] {
     border-radius: 50%;
     background-color: #ecdfb1;
     color: #fff;
+    transform: scale(0.92);
 }
 
 .plus-btn {
@@ -266,6 +268,7 @@ input[type=text] {
     color:#b38f3b;
     margin-left: 6px;
     font-size: 22px;
+    transition: 0.1s;
 }
 
 .plus-btn:active {
@@ -274,6 +277,7 @@ input[type=text] {
     border-radius: 50%;
     background-color: #ecdfb1;
     color: #fff;
+    transform: scale(0.92);
 }
 
 .send-btn {
@@ -288,6 +292,7 @@ input[type=text] {
     color:#ffffff;
     margin-left: 2px;
     margin-right: 2px;
+    transition: 0.1s;
 }
 
 .send-btn i {
@@ -299,6 +304,7 @@ input[type=text] {
     height: 40px;
     border-radius: 50%;
     background-color: #f3d37c;
+    transform: scale(0.92);
 }
 
 .plus-menu {

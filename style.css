@@ -2,7 +2,7 @@ body {
     background-image: url("background.jpg");
     background-size: cover;
     background-position: center;
-    color: #555;
+    background-color: #EDEDED;
     overflow: hidden;
 }
 
@@ -27,7 +27,7 @@ body,html {
 }
 
 .top-area .day-header {
-    background-color: hsl(46, 84%, 88%);
+    background-color: hsl(46, 88%, 90%);
     height: 24px;
     flex-shrink: 0;
     display: flex;
@@ -157,6 +157,12 @@ body,html {
     display: none;
 }
 
+.typing-indicator {
+    color:hsl(0, 0%, 53%);
+    margin: 3px 9px;
+    max-width: 80%;
+}
+
 .chat-container {
     flex: 1;
     min-height: 0;
@@ -167,7 +173,6 @@ body,html {
     margin-top: 50px;
     height: 94vh;
     width: 100%;
-    background: #EDEDED;
 }
 
 .chat-box {
@@ -179,6 +184,7 @@ body,html {
 }
 
 .input-area {
+    background-color: #EDEDED;
     border-top: 0.5px solid #E0E0E0;
     height: 64px;
     flex-shrink: 0;

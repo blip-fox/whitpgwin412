@@ -21,7 +21,7 @@
 
         <div class="header-left">
             <button class="back-btn" id="backBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-            <span class="his-name" id="hisName">哥哥</span>
+            <span class="his-name" id="hisName">前夫哥</span>
             <span class="status-dot-online" id="statusDot"></span>
             <span class="his-status" id="hisStatus">在线</span>
         </div>
@@ -82,14 +82,15 @@
 
     <div class="chat-container">
         <div class="chat-box" id="chatBox"></div>
-        <div class="typing-indicator" id="typingIndicator">惠正在输入</div>
+        <div class="typing-indicator" id="typingIndicator">他正在输入</div>
     </div>
 
     <div class="input-area">
-        <button class="sticker-btn" id="stickerBtn"><i class="fa fa-smile-o" aria-hidden="true"></i></button>
+        <button class="sticker-btn" id="stickerBtn" style="position: relative"><i class="fa fa-smile-o" aria-hidden="true"></i></button>
         <button class="plusbtn" id="plusBtn" style="position: relative">+</button>
         <input type="text" id="userInput" placeholder="输入消息..." />
         <button onclick="sendMessage()"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+        
 
         <div class="sticker-panel" id="stickerPanel">
             <button class="add-sticker-btn" onclick="document.getElementById('stickerInput').click">+ 添加表情包</button>

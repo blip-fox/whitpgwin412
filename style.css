@@ -27,7 +27,7 @@ body,html {
 }
 
 .top-area .day-header {
-    background-color: hsl(46, 88%, 90%);
+    background-color: rgb(252, 241, 207);
     height: 24px;
     flex-shrink: 0;
     display: flex;
@@ -48,7 +48,7 @@ body,html {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    background: #EDEDED;
+    background: rgb(255, 252, 244);
     border-bottom: 0.5px solid #E0E0E0;
     justify-content: space-between;
     position: fixed;
@@ -65,6 +65,8 @@ body,html {
 .header-right {
     display: flex;
     align-items: center;
+    margin-left: auto;
+    margin-right: 15px;
 }
 
 .back-btn {
@@ -100,10 +102,6 @@ body,html {
     -webkit-text-size-adjust: 100%;
 }
 
-.header-right {
-    margin-left: auto;
-    margin-right: 15px;
-}
 
 .search-btn {
     background: transparent;
@@ -158,7 +156,7 @@ body,html {
 }
 
 .typing-indicator {
-    color:hsl(0, 0%, 53%);
+    color:rgb(158, 158, 158);
     margin: 3px 9px;
     max-width: 80%;
 }
@@ -184,16 +182,30 @@ body,html {
 }
 
 .input-area {
-    background-color: #EDEDED;
+    background-color: rgb(255, 252, 244);
     border-top: 0.5px solid #E0E0E0;
+    display: flex;
+    padding: 10px;
     height: 64px;
     flex-shrink: 0;
 }
 
+input[type=text] {
+    flex: 1;
+    padding: 9px;
+    border-radius: 33px;
+    border: 1px solid rgb(238, 226, 192);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#userInput {}
+
 .plus-menu {
-    display:none;
+    display: none;
 }
 
 .sticker-panel {
     display: none;
 }
+
+

@@ -69,6 +69,7 @@ body,html {
 }
 
 .back-btn {
+    -webkit-tap-highlight-color: transparent;
     color: #777777;
     font-size: 20px;
     margin-left: 10px;
@@ -103,6 +104,7 @@ body,html {
 
 
 .search-btn {
+    -webkit-tap-highlight-color: transparent;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -116,6 +118,7 @@ body,html {
 }
 
 .setting-menu {
+    -webkit-tap-highlight-color: transparent;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -158,6 +161,7 @@ body,html {
     color:#9e9e9e;
     margin: 3px 9px;
     max-width: 80%;
+    font-size: 13px;
 }
 
 .typing-indicator::after {
@@ -167,6 +171,7 @@ body,html {
     width: 1ch;
     overflow: hidden;
     vertical-align: bottom;
+    font-size: 13px;
 }
 
 .chat-container {

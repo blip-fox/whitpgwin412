@@ -131,7 +131,7 @@ body,html {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px #00000033;
     display: none;
     z-index: 1000;
     min-width: 100px;
@@ -155,9 +155,18 @@ body,html {
 }
 
 .typing-indicator {
-    color:rgb(158, 158, 158);
+    color:#9e9e9e;
     margin: 3px 9px;
     max-width: 80%;
+}
+
+.typing-indicator::after {
+    content: '';
+    display: inline-block;
+    animation: 1.2 steps (3,end) infinite dotJump;
+    width: 1ch;
+    overflow: hidden;
+    vertical-align: bottom;
 }
 
 .chat-container {
@@ -181,9 +190,10 @@ body,html {
 }
 
 .input-area {
-    background-color: rgb(255, 252, 244);
-    border-top: 0.5px solid #E0E0E0;
+    background-color: #fffcf4;
+    border-top: 0.5px solid #dfdac9;;
     display: flex;
+    align-items: center;
     padding: 10px;
     height: 64px;
     flex-shrink: 0;
@@ -193,12 +203,63 @@ input[type=text] {
     flex: 1;
     padding: 9px;
     border-radius: 33px;
-    border: 1px solid rgb(238, 226, 192);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #eee2c0;
+    box-shadow: 0 2px 4px #00000033;
+    font-size: 14px;
+    background-color: #fff;
 }
 
 #userInput {
     width: 100%;
+    padding: 12px 20px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    font-size: 13px;
+    color: #a38540;
+    outline: 0;
+    transition: .3s
+}
+
+#userInput:focus {
+    border-color: #ebdcab;
+    background-color: #fff;
+}
+
+#userInput::placeholder {
+    color: #a38540;
+}
+
+.sticker-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #dfdac9;
+    border-radius: 50%;
+    background:  #fffcf4;
+    color:#a38540;
+    margin-left: 2px;
+    font-size: 15px;
+}
+
+.plus-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #dfdac9;
+    border-radius: 50%;
+    background:  #fffcf4;
+    color:#a38540;
+    margin-left: 6px;
+    font-size: 22px;
+}
+
+.send-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ebd7a0;
+    border-radius: 50%;
+    background:  #ebd7a0;
+    color:#ffffff;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .plus-menu {
@@ -206,6 +267,8 @@ input[type=text] {
 }
 
 .sticker-panel {
+    width: 7px;
+    height: 7px;
     display: none;
 }
 

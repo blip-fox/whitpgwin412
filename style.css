@@ -51,7 +51,6 @@ body,html {
     background: rgb(255, 252, 244);
     border-bottom: 0.5px solid #E0E0E0;
     justify-content: space-between;
-    position: fixed;
     width: 100%;
     top: 24px;
 }
@@ -198,7 +197,9 @@ input[type=text] {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#userInput {}
+#userInput {
+    width: 100%;
+}
 
 .plus-menu {
     display: none;

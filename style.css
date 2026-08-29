@@ -162,6 +162,7 @@ body,html {
     margin: 3px 9px;
     max-width: 80%;
     font-size: 13px;
+    -webkit-text-size-adjust: 100%;
 }
 
 .typing-indicator::after {

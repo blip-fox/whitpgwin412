@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<div class="app">
 
     <div class="top-area">
         <div class="day-header">
@@ -82,15 +83,21 @@
     <div class="chat-container">
         <div class="chat-box" id="chatBox"></div>
         <div class="typing-indicator" id="typingIndicator">惠正在输入</div>
+    </div>
 
-        <div class="input-area">
-            <button class="sticker-btn" id="stickerBtn"><i class="fa fa-smile-o" aria-hidden="true"></i></button>
-            <button class="plusbtn" id="plusBtn">+</button>
-            <input type="text" id="userInput" placeholder="输入消息..." />
-            <button onclick="sendMessage()">发送</button>
+    <div class="input-area">
+        <button class="sticker-btn" id="stickerBtn"><i class="fa fa-smile-o" aria-hidden="true"></i></button>
+        <button class="plusbtn" id="plusBtn" style="position: relative">+</button>
+        <input type="text" id="userInput" placeholder="输入消息..." />
+        <button onclick="sendMessage()">发送</button>
+
+        <div class="sticker-panel" id="stickerPanel">
+            <button class="add-sticker-btn" onclick="document.getElementById('stickerInput').click">+ 添加表情包</button>
+            <div class="sticker-grid" id="stickerGrid"></div>
+            <input type="file" id="stickerInput" accept="image/*" multiple hidden style="display: none;" onchange="addSticker(event)">
         </div>
 
-        <div class="plusbtn" id="plusBtn">
+        <div class="plus-menu" id="plusMenu">
             <button class="menuItem" id="voiceCallBtn">
                 <div class="menuIcon"><i class="fa fa-phone" aria-hidden="true"></i></div>
             </button>
@@ -100,16 +107,12 @@
             <button class="menuItem" id="paymentBtn">
                 <div class="menuIcon"><i class="fa fa-gbp" aria-hidden="true"></i></div>
             </button>
-        </div>
-
-        <div class="sticker-panel" id="stickerPanel">
-            <button class="add-sticker-btn" onclick="document.getElementById('stickerInput').click">+ 添加表情包</button>
-            <div class="sticker-grid" id="stickerGrid"></div>
-            <input type="file" id="stickerInput" accept="image/*" multiple hidden style="display: none;" onchange="addSticker(event)">
-        </div>
+        </div>  
     </div>
+</div>
 
     <script src="script.js"></script>
 </body>
 
 </html>
+

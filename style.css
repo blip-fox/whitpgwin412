@@ -2,13 +2,15 @@ body {
     background-image: url("background.jpg");
     background-size: cover;
     background-position: center;
-    color: #555
+    color: #555;
+    overflow: hidden;
 }
 
 body,html {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
     overflow-x: hidden;
     box-sizing: border-box
 }
@@ -17,12 +19,17 @@ body,html {
     box-sizing: inherit
 }
 
-.top-area {
-    background-color: hsl(46, 84%, 88%);
+.app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.day-header {
+.top-area .day-header {
+    background-color: hsl(46, 84%, 88%);
     height: 24px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     position: relative;
@@ -38,11 +45,15 @@ body,html {
 
 .header{
     height: 50px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
-    background: #f5f5f5;
-    border-bottom: 0.5px solid #ddd;
+    background: #EDEDED;
+    border-bottom: 0.5px solid #E0E0E0;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 24px;
 }
 
 .header-left {
@@ -117,13 +128,25 @@ body,html {
 
 .dropdown {
     position: absolute;
+    margin-top: 5px; 
     top: 100%;
-    right: 0;
+    right: 5px;
     background-color: #fff;
     border: 1px solid #ccc;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: none;
     z-index: 1000;
+    min-width: 100px;
+}
+
+.dropdown-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3a3a3a;
+    padding: 13px;
+    
 }
 
 .nickname-overlay {
@@ -134,3 +157,37 @@ body,html {
     display: none;
 }
 
+.chat-container {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+    height: 94vh;
+    width: 100%;
+    background: #EDEDED;
+}
+
+.chat-box {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column
+}
+
+.input-area {
+    border-top: 0.5px solid #E0E0E0;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.plus-menu {
+    display:none;
+}
+
+.sticker-panel {
+    display: none;
+}

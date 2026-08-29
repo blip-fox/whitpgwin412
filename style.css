@@ -182,7 +182,6 @@ body,html {
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    margin-top: 50px;
     width: 100%;
 }
 

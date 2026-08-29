@@ -40,7 +40,7 @@ body,html {
     text-align: center;
     font-size: 13px;
     font-weight: 500;
-    color: #a38540;
+    color: #b38f3b;
 }
 
 .header{
@@ -69,7 +69,7 @@ body,html {
 }
 
 .back-btn {
-    color: #3a3a3a;
+    color: #777777;
     font-size: 20px;
     margin-left: 10px;
     border: none;
@@ -107,7 +107,7 @@ body,html {
     border: none;
     cursor: pointer;
     font-size: 15px;
-    color: #3a3a3a;
+    color: #777777;
     margin-right: 10px;
 }
 
@@ -120,7 +120,7 @@ body,html {
     border: none;
     cursor: pointer;
     font-size: 17px;
-    color: #3a3a3a;
+    color: #777777;
 }
 
 .dropdown {
@@ -215,7 +215,7 @@ input[type=text] {
     margin-left: 10px;
     margin-right: 10px; 
     font-size: 13px;
-    color: #a38540;
+    color: #b38f3b;
     outline: 0;
     transition: .3s
 }
@@ -226,40 +226,61 @@ input[type=text] {
 }
 
 #userInput::placeholder {
-    color: #a38540;
+    color: #b38f3b;
 }
 
 .sticker-btn {
     width: 40px;
     height: 40px;
-    border: 1px solid #dfdac9;
+    border: 2px solid #eee6d0;
     border-radius: 50%;
     background:  #fffcf4;
-    color:#a38540;
+    color:#b38f3b;
     margin-left: 2px;
     font-size: 15px;
+}
+
+.sticker-btn:active {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ecdfb1;
 }
 
 .plus-btn {
     width: 40px;
     height: 40px;
-    border: 1px solid #dfdac9;
+    border: 2px solid #eee6d0;
     border-radius: 50%;
     background:  #fffcf4;
-    color:#a38540;
+    color:#b38f3b;
     margin-left: 6px;
     font-size: 22px;
+}
+
+.plus-btn:active {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ecdfb1;
 }
 
 .send-btn {
     width: 40px;
     height: 40px;
-    border: 1px solid #ebd7a0;
+    border: 2px solid #f5dfa4;
     border-radius: 50%;
-    background:  #ebd7a0;
+    background:  #f5dfa4;
     color:#ffffff;
     margin-left: 2px;
     margin-right: 2px;
+}
+
+.send-btn:active {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f3d37c;
 }
 
 .plus-menu {
